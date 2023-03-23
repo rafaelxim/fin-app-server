@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "entries",
+  "info": {
+    "singularName": "entry",
+    "pluralName": "entries",
+    "displayName": "entry",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "period": {
+      "type": "date",
+      "required": true
+    },
+    "value": {
+      "type": "decimal",
+      "required": true,
+      "default": 0,
+      "unique": false
+    },
+    "investment": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::investment.investment"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "transfer": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
