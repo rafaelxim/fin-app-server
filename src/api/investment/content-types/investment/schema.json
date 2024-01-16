@@ -4,7 +4,8 @@
   "info": {
     "singularName": "investment",
     "pluralName": "investments",
-    "displayName": "investment"
+    "displayName": "investment",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,6 +21,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::category.category"
+    },
+    "strategy": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::strategy.strategy"
     }
   }
 }
